@@ -24,7 +24,9 @@ body {
     background: #212121;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 0 2.5vw;
+    border: 20x solid red;
 }
 
 .toggle-btn {
@@ -51,8 +53,14 @@ body {
     top: 100%;
 }
 
-.logo {
+.menu-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: centers;
+}
 
+.logo {
     align-items: center;
     height: 50px;
     width: 100px;
@@ -63,14 +71,15 @@ body {
 .search-box {
     position: relative;
     max-width: 500px;
-    width: 50%;
+    width: 50vw;
     height: 35px;
     display: flex;
-    margin-left: 220px;
-
+    align-items: ;
+    margin-left: auto; // set the auto margin
+    /* margin-left: 200px; */
 }
 
-.search-bar {
+.search-input {
     width: 85%;
     height: 100%;
     border: 2px solid #dbdbdb;
@@ -95,14 +104,15 @@ body {
 }
 
 .mic-img {
-    width: 25px;
-    height: 80%;
+    width: 20px;
+    height: 85%;
 }
 
-.user-options {
+.user-options,
+.-search-box {
     height: 35px;
     display: flex;
-    margin-left: auto;
+    margin-left: auto; // set the auto margin
     align-items: center;
 }
 
@@ -137,8 +147,8 @@ body {
     position: fixed;
     top: 60px;
     left: 0;
-    min-width: 250px;
-    width: 250px;
+    min-width: 200px;
+    width: 200px;
     height: calc(100vh - 60px);
     background: #212121;
     padding-right: 10px;
@@ -147,7 +157,7 @@ body {
 .links {
     display: block;
     width: 100%;
-    padding: 10px 20px;
+    padding: 5px 20px;
     display: flex;
     align-items: center;
     text-transform: capitalize;
@@ -162,9 +172,8 @@ body {
     margin-right: 20px;
 }
 
-.links:hover,
-.links.active {
-    background: rgba(0, 0, 0, 0.1);
+.links:hover {
+    background: rgba(241, 237, 237, 0.1);
 }
 
 .seperator {
@@ -184,10 +193,11 @@ body {
 /* ...................... filter................*/
 .filters {
     position: fixed;
-    left: 250px;
-    top: 60px;
+    font-family: 'roboto', sans-serif;
+    left: 200px;
+    top: 50px;
     width: calc(100% - 250px);
-    height: 60px;
+    height: 50px;
     background: #fff;
     border-top: 1px solid #dbdbdb;
     border-bottom: 1px solid #dbdbdb;
@@ -196,6 +206,10 @@ body {
     align-items: center;
     overflow-x: auto;
     overflow-y: hidden;
+    margin-top: 10px;
+    margin-left: 0px;
+    padding: 20px;
+    z-index: 9;
 }
 
 .filters::-webkit-scrollbar {
@@ -204,8 +218,8 @@ body {
 
 .filter-options {
     flex: 0 0 auto;
-    padding: 10px 20px;
-    border-radius: 50px;
+    padding: 5px 10px;
+    border-radius: 40px;
     background: #f0f0f0;
     border: 1px solid #dbdbdb;
     text-transform: capitalize;
@@ -224,7 +238,7 @@ body {
 .video-container {
     width: calc(100% - 250px);
     margin-top: 120px;
-    margin-left: 250px;
+    margin-left: 230px;
     padding: 20px;
     display: grid;
     grid-template-columns: repeat(4, 25%);
